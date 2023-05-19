@@ -1,0 +1,22 @@
+2.Ans However those don't do what I need what i have is a textfile that already contains text before nodejs is strated then I want node to append text at the end of my file.
+  fs.writeFile('log.txt','Hello node\r\n' ,{flag: "a+"}, (err) =>{if (err) throw err;
+      console.log('The file is created if not existing!!);});
+   var fs = require('fs');
+
+    funcation ReadAppend(file, appendFile){
+      fs.readfile(appendfile, funcation (err,data) {
+         if (err) throw err;
+         console.log (File was read');
+       
+         fs.appendFile(file,data, funcation (err){
+           if (err) throw err;
+          console.log('the "data to append" was appended to file!')
+         
+          });
+       });
+      }
+ //edit this with your file names
+file = 'name_of_main_file.csv';
+appendFile = 'name_of_second_file_to_combine.csv';
+ReadAppend(file,appendFile); 
+  

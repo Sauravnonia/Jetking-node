@@ -1,0 +1,8 @@
+3.Ans= But it a little tricky is there a 'stared'way to create an empty file in Node.js
+    var fs = require("fs"):
+    fs.open(path, "wx", funcation (err, fd){
+       //handel error
+       fs.close(fd, funcation (err){
+         //handel error
+       });
+  });
